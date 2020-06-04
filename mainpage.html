@@ -1,18 +1,127 @@
-
 <!DOCTYPE html>
 
-
 <html>
-<head>
-	<title>Elliott Hogg Photo</title>
-</head>
 
-<body>
+	<style>
+		body {
+		  font-family: "Lato", sans-serif;
+		}
 
-I like makin pictures
+		img {
+			/* Control max size of images and auto scale*/
+			max-width:600px;
+			max-height:600px;
+			width:auto;
+			height:auto;
+			}
+
+		.main {
+		  margin-left: 160px; /* Same as the width of the sidenav */
+		  font-size: 28px; /* Increased text to enable scrolling */
+		  padding: 0px 10px;
+		}
+
+		.center {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  /*width: 50%;*/
+		}
+
+		img.absolute {
+		  position: absolute;
+		  top: 80px;
+		  right: 40px;
+		  width: 200px;
+		  height: 100px;
+		  border: 3px solid #73AD21;
+		}
+
+		.title {
+			background-color: #666;
+			padding: 30px;
+			text-align: center;
+			font-size: 35px;
+			color: white;
+			position: fixed;
+			left: 40%;
+			top: 10px;
+		}
+	</style>
+
+		
 
 
-<a href="#" class="image featured"><img src="images/crane1.jpg" alt="" width="300" height="600" /></a>
+	<head>
+		<title class="title">Elliott Hogg Photo</title>
 
-</body>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+		<body>
+
+			<p href="text" id="title" style="position:fixed; left:40%; font-size:20px"> Elliott Hogg Photo </p>
+
+			<section>
+				<img id="image1" src="images/crane1.png" alt="" width="500" height="300" class="center" style="position:fixed; left:500px; top:30%;"/>
+				<img id="image2" src="images/crane1.png" alt="" width="500" height="300" class="center" style="position:fixed; left:700px; top:30%;"/>
+
+				
+
+
+			</section>		
+
+			<!-- <button onclick="scrambler()">Click me</button>  -->
+
+			<script type="text/javascript">
+
+				var loop = setInterval(callimage1, 2000);
+				var loop = setInterval(callimage2, 2000);
+
+				function callimage1() {
+					scrambler("image1")
+				}
+				function callimage2() {
+					scrambler("image2")
+				}
+				
+				function scrambler(imageid) {
+
+					// Scramble randomly chosen images, fading in and out
+					var image_list = ["crane1", "crane2", "child", "walkers"];
+					var random_image = image_list[Math.floor(Math.random()*image_list.length)];
+
+					var newimage = "images/" + random_image + ".png";
+
+					document.getElementById(imageid).setAttribute("src", newimage);
+					fadeout(imageid);
+				}
+
+				function fadeout(image) {
+
+					var steps = 10
+					var i;
+					for (i = 0; i < steps; i++){
+						var element = document.getElementById(image);
+						var opac = (steps - i)*10;
+						element.style.opacity = toString(opac);
+						element.style.filter = 'alpha(opacity=' + toString(opac) + ')';
+					}
+				}
+
+				function fadein(image) {
+
+				}
+
+			</script>
+
+
+		</body>
+
+	<footer class="center" style="position:fixed; left:50%; bottom:10px;">
+		
+		This site is owned by mr elliott hogg so don't steal!	
+
+	</footer>
+
 </html>
