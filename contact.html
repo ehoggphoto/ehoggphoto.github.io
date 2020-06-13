@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html href="/">
+
+	<link rel="stylesheet" href="style.css">	
+	<head>
+		<script src="jquery-3.5.1.js"></script>	
+
+		<script>
+		$(document).ready(function(){
+		  
+		  $("img").fadeToggle(2000);
+		  $("html").fadeToggle(1000);
+
+			$("#image1").hover(function(){
+				$("#image1").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image1").mouseleave(function(){
+				$("#image1").animate({
+					opacity: '1.0'
+				});
+			});
+
+			$("#image2").hover(function(){
+				$("#image2").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image2").mouseleave(function(){
+				$("#image2").animate({
+					opacity: '1.0'
+				});
+			}); 
+
+			$("#image3").hover(function(){
+				$("#image3").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image3").mouseleave(function(){
+				$("#image3").animate({
+					opacity: '1.0'
+				});
+			}); 
+	
+		});
+
+		
+		</script>	
+	</head>
+
+	<body>
+
+		<title class="title" style="text-align: center">Elliott Hogg Photo</title>
+
+		<p id="page-heading" style="font-size:25px; letter-spacing: 0.15em"> Elliott Hogg Photo </p>
+
+		<!-- Navigation bar -->
+		<div id="pagenav">
+		  <nav class="pagenav">
+		  	<ul class="pagenav">
+		  		<li>
+		  			<a href="homepage.html">Selected Work</a>
+		  		</li>
+		  		<li>
+		  			<a href="store.html">Store</a>
+		  		</li>
+		  		<li>
+		  			<a href="contact.html">Contact</a>
+		  		</li>
+		  	</ul>
+	
+		  </nav>
+		</div>
+
+		<hr style="opacity: 0.25">
+		<br>
+		<p href="text" id="about" style="font-size:15px;"> You can contact me at this adress yihhhh
+															<br> </p>
+		<br><br>
+		<div class="main" >
+				
+			
+
+			
+		</div>
+		
+		<div class="main" >
+		  
+		  
+		</div>
+
+	</body>
+
+	
+
+</html>
