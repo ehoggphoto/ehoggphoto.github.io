@@ -2,7 +2,7 @@
 
 <html>
 
-	
+	<link rel="stylesheet" href="style.css">	
 	<head>
 		<script src="jquery-3.5.1.js"></script>	
 
@@ -10,15 +10,7 @@
 		$(document).ready(function(){
 		  
 		  $("img").fadeToggle(2000);
-
-		  // $("p").fadeToggle(1000);
-
 		  $("html").fadeToggle(1000);
-
-		 //  $("p").hover(function(){
-			//   $("p").fadeToggle(1000);
-			// });
-
 
 			$("#image1").hover(function(){
 				$("#image1").animate({
@@ -29,7 +21,30 @@
 				$("#image1").animate({
 					opacity: '1.0'
 				});
+			});
+
+			$("#image2").hover(function(){
+				$("#image2").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image2").mouseleave(function(){
+				$("#image2").animate({
+					opacity: '1.0'
+				});
 			}); 
+
+			$("#image3").hover(function(){
+				$("#image3").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image3").mouseleave(function(){
+				$("#image3").animate({
+					opacity: '1.0'
+				});
+			}); 
+	
 		});
 
 		
@@ -40,15 +55,12 @@
 
 		<title class="title" style="text-align: center">Elliott Hogg Photo</title>
 
-		<link rel="stylesheet" href="style.css">
-
-
-		<p href="text" id="title" style="font-size:25px; letter-spacing: 0.15em"> Elliott Hogg Photo </p>
+		<p id="page-heading" style="font-size:25px; letter-spacing: 0.15em"> Elliott Hogg Photo </p>
 
 		<!-- Navigation bar -->
 		<div id="pagenav">
 		  <nav class="pagenav">
-		  	<ul>
+		  	<ul class="pagenav">
 		  		<li>
 		  			<a href="/html/">Selected Work</a>
 		  		</li>
@@ -64,48 +76,33 @@
 		</div>
 
 		<hr style="opacity: 0.25">
-
 		<br>
-
-		<p href="text" id="about" style="font-size:15px;"> This site displays my work as a photographer largely based around Bristol
-																		 <br> but also on my other adventures. </p>
-
+		<p href="text" id="about" style="font-size:15px;"> I'm a Bristol based photographer who likes to document my curious wanderings
+															<br> to new places and around hidden corners. </p>
 		<br><br>
-
-		<!-- <button onclick="scrambler()">Click me</button>  -->
-		<div class="main" id="section1">
+		<div class="main" >
 				
 				<!-- Row 1 -->
 			<div class="row">
 			  <div class="column">
-			    <img id="image1" src="images/crane2.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
+			  	<a class="absolute">Bristol</a>
+			    <img id="image1" src="images/crane2.png"/>
 			  </div>
 			  <div class="column">
-			    <img id="image2" src="images/library.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
+			  	<a class="absolute">Prague</a>
+			    <img id="image2" src="images/library.png"/>
 			  </div>
 			  <div class="column">
-			    <img id="image3" src="images/port.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
+			  	<a class="absolute">Japan</a>
+			    <img id="image3" src="images/port.png"/>
 			  </div>
 			</div>
 
-			<br><br>
-
-			<!-- Row 2 -->
-			<div class="row">
-			  <div class="column">
-			    <img id="image1" src="images/crane1.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
-			  </div>
-			  <div class="column">
-			    <img id="image2" src="images/statue.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
-			  </div>
-			  <div class="column">
-			    <img id="image3" src="images/manor.png" alt="" width="500" height="300" class="center" style=" right:25%; top:20%; display: none"/>
-			  </div>
-			</div>
+			
 		</div>
 		
-		<div class="main" id="section2">
-		  <h2>Contact</h2>
+		<div class="main" >
+		  
 		  
 		</div>
 

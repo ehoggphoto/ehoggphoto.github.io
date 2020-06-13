@@ -1,15 +1,7 @@
-body {
-  background-color: white;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: grey;
-}
 
 body {
   font-family:courier new;
+  background-color: white;
 }
 
 html {
@@ -22,17 +14,22 @@ html {
 
 img {
 	/* Control max size of images and auto scale*/
-	max-width:400px;
-	max-height:400px;
+	max-width:550px;
+	max-height:550px;
 	width:auto;
 	height:auto;
+  right:25%; 
+  top:20%; 
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
 	}
 
-img:hover {
-	/* Control max size of images and auto scale*/
+/*img:hover {
+	 Control max size of images and auto scale
 	opacity: 0.5;
 
-	}
+	}*/
 
 .main {
   margin-left: 10px; /* Same as the width of the sidenav */
@@ -41,12 +38,6 @@ img:hover {
   padding: 0px 10px;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /*width: 50%;*/
-}
 
 img.absolute {
   position: absolute;
@@ -55,6 +46,7 @@ img.absolute {
   width: 200px;
   height: 100px;
   border: 3px solid #73AD21;
+  right:25%; top:20%; display: none;
 }
 
 #pagenav {
@@ -63,7 +55,7 @@ img.absolute {
 }
 
 #section1 {
-  height: 2000px;
+  height: 700px;
   /*background-color: white;*/
 }
 
@@ -73,7 +65,8 @@ img.absolute {
 }	
 
 h1 {text-align: center;}
-p {text-align: center;}
+p {text-align: center;
+  color: grey;}
 div {text-align: center;}
 
 /*a {
@@ -81,9 +74,15 @@ div {text-align: center;}
 	text-decoration: none;
 }*/
 	
+
+
+
+
+/* Classes for page navigator*/
+
 .pagenav {
-	width: 100%;
-	/*margin: 10px;*/
+  width: 100%;
+  /*margin: 10px;*/
 }
 
 .pagenav a {
@@ -92,14 +91,11 @@ div {text-align: center;}
   color: black;
   text-decoration: none;
   font-size: 17px;
-   
-  
 }
 
 .pagenav a:hover {
   opacity: 0.8;
 }
-
 
 .pagenav ul{
   width: 50%;
@@ -111,7 +107,7 @@ div {text-align: center;}
 
 .pagenav li{
 	float: left;
-	width: 20%;
+	width: 30%;
 	text-decoration: none;
 }
 
@@ -119,6 +115,8 @@ div {text-align: center;}
 
 
 /* Clearfix (clear floats) */
+
+
 
 /* Image rows and columns*/
 .row::after {
@@ -128,9 +126,22 @@ div {text-align: center;}
 }
 
 .column {
+  position: relative;
   float: left;
   width: 33.3%;
   /*padding: 5px;*/
+}
+
+
+a.absolute {
+  /*position: absolute;*/
+  /*top: 50%;*/
+  width: 100%;
+  left: 0%;
+  text-align: center;
+  font-size: 18px;
+  color: grey;
+   
 }
 
 .rowpage::after {
