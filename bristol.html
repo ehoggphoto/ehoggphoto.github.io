@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+	<link rel="stylesheet" href="collection.css">	
+	<head>
+		<script src="jquery-3.5.1.js"></script>	
+
+		<script>
+		$(document).ready(function(){
+		  
+		  $("img").fadeToggle(2000);
+		  $("html").fadeToggle(1000);
+	
+		});
+
+		
+		</script>	
+	</head>
+
+	<body>
+
+		<title>Elliott Hogg Photo</title>
+
+		<div class="title">
+			<p id="page-heading" style="font-size:25px; letter-spacing: 0.25em"> ELLIOTT HOGG PHOTO </p>
+		</div>
+		
+
+		<!-- Navigation bar -->
+		<div id="pagenav">
+		  <nav class="pagenav">
+		  	<ul class="pagenav">
+		  		<li>
+		  			<a href="index.html">Selected Work</a>
+		  		</li>
+		  		<li>
+		  			<a href="store.html">Store</a>
+		  		</li>
+		  		<li>
+		  			<a href="contact.html">Contact</a>
+		  		</li>
+		  	</ul>
+	
+		  </nav>
+		</div>
+
+		<hr class="nav-seperator">
+		<br>
+		<p href="text" id="about" style="font-size:15px;"> A lot of my work I have taken around Bristol where I currently live. </p>
+		<br><br>
+
+
+		<div class="main" >
+
+			<script type="text/javascript">
+			
+			// On image click expand to full page view
+			function enlarge(id){
+
+				var img = document.getElementById(id);
+				var fullimage = document.getElementById("lightbox_img");	
+
+				fullimage.src = img.src;
+			}
+			</script>
+			
+			<!-- Row 1 -->
+			<div class="row">
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image1" src="images/crane2.png" onclick="enlarge(id)"/>
+				</a> 
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image2" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image3" src="images/child.png" style="background: red;" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image4" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image5" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			</div>
+
+			<br><br>
+
+			<!-- Row 2 -->
+			<div class="row">
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image1" src="images/crane2.png" onclick="enlarge(id)"/>
+				</a> 
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image2" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image3" src="images/child.png" style="background: red;" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image4" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			  <div class="column">
+			    <a  href="#lightbox">
+				   <img id="image5" src="images/crane1.png" onclick="enlarge(id)"/>
+				</a>
+			  </div>
+			</div>
+
+			<br><br>
+
+
+			
+		</div>
+		
+		<div class="lightbox-target" id="lightbox">
+		   <img id="lightbox_img" src="images/crane2.png"/>
+		   <a class="lightbox-close" href="#"></a>
+		</div>
+
+
+	</body>
+
+	
+
+</html>
