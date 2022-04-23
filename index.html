@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+
+
+    var imageURLs = ["titles/title1.png", "titles/title2.png", "titles/title3.png",
+    				"titles/title4.png", "titles/title5.png", "titles/title6.png",
+    				"titles/title7.png", "titles/title9.png",
+    				"titles/title10.png", "titles/title11.png"];
+	
+	function getImageTag() {
+	    var img = '<img src=\"';
+	    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+	    img += imageURLs[randomIndex];
+	    img += '\" alt=\"Some alt text\"/>';
+	    return img;
+	  }
+</script>
+
 
 <html>
 
@@ -9,8 +26,8 @@
 		<script>
 		$(document).ready(function(){
 		  
-		  $("img").fadeToggle(2000);
-		  $("html").fadeToggle(1000);
+		  $("img").fadeToggle(200);
+		  $("html").fadeToggle(500);
 
 			$("#image1").hover(function(){
 				$("#image1").animate({
@@ -51,24 +68,35 @@
 		</script>	
 	</head>
 
-	<body>
+	<hr style="opacity: 0.25">
 
-		<title>Elliott Hogg Photo</title>
+	<body class="main">
 
-		<div class="title">
-			<p id="page-heading" style="font-size:25px; letter-spacing: 0.25em"> ELLIOTT HOGG PHOTO </p>
+		<div class="sidenav">
+		 	<!-- <img id="image1" src="images/crane2.png" + Math.round(Math.random()*3)/> -->
+		 	<script type="text/javascript">
+			  document.write(getImageTag());
+			</script>
+			<br>
+			<a href="index.html">Selected work</a>
+			<a href="prints.html">Prints</a>
+			<a href="contact.html">About</a>
+			
 		</div>
-		
+<!-- 
+		<title class="title" style="text-align: center">Elliott Hogg</title>
+
+		<p id="page-heading" style="font-size:25px; letter-spacing: 0.15em"> ELLIOTT HOGG </p> -->
 
 		<!-- Navigation bar -->
-		<div id="pagenav">
+		<!-- <div id="pagenav">
 		  <nav class="pagenav">
 		  	<ul class="pagenav">
 		  		<li>
 		  			<a href="homepage.html">Selected Work</a>
 		  		</li>
 		  		<li>
-		  			<a href="store.html">Store</a>
+		  			<a href="store.html">Prints</a>
 		  		</li>
 		  		<li>
 		  			<a href="contact.html">Contact</a>
@@ -76,31 +104,28 @@
 		  	</ul>
 	
 		  </nav>
-		</div>
+		</div> -->
 
-		<hr style="opacity: 0.25">
+		
 		<br>
-		<p href="text" id="about" style="font-size:15px;"> I'm a Bristol based photographer who likes to document my curious wanderings
-															<br> to new places and around hidden corners. </p>
+		<p href="text" id="about" style="font-size:15px;"> <i> I'm a Bristol based photographer who likes to document my curious wanderings
+															<br> to new places and around hidden corners. </i> </p>
 		<br><br>
-		<div class="main" >
+		<div>
 				
 				<!-- Row 1 -->
 			<div class="row">
 			  <div class="column">
-			  	<a href="bristol.html" class="absolute">Bristol
-			    <img href="bristol.html" id="image1" src="images/crane2.png"/>
-				</a>
+			  	<a class="absolute">Bristol</a>
+			    <img id="image1" src="images/crane2.png"/>
 			  </div>
 			  <div class="column">
-			  	<a href="bristol.html" class="absolute">Bristol
-			    <img id="image1" src="images/crane2.png"/>
-				</a>
+			  	<a class="absolute">Prague</a>
+			    <img id="image2" src="images/library.png"/>
 			  </div>
 			  <div class="column">
-			  	<a href="bristol.html" class="absolute">Bristol
-			    <img id="image1" src="images/crane2.png"/>
-				</a>
+			  	<a class="absolute">Japan</a>
+			    <img id="image3" src="images/port.png"/>
 			  </div>
 			</div>
 

@@ -1,6 +1,8 @@
 
 body {
-  font-family:courier new;
+  
+  font-family: "Times New Roman", Times, serif;
+  /*font-family:courier new;*/
   background-color: white;
 }
 
@@ -71,12 +73,6 @@ img:hover{
 
 
 
-.main {
-  margin-left: 10px; /* Same as the width of the sidenav */
-  margin-right: 10px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
 
 
 #pagenav {
@@ -186,7 +182,41 @@ a.absolute {
   padding: 100px;
 }
 
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 5;
+  left: 0;
+  background-color: #ffff;
+  overflow-x: hidden;
+  padding-top: 5px;
+}
 
+.sidenav a {
+  padding: 26px 5px 6px 35px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  text-align: left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 20%; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 
 

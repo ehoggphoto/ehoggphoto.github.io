@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+
+
+    var imageURLs = ["titles/title1.png", "titles/title2.png", "titles/title3.png",
+    				"titles/title4.png", "titles/title5.png", "titles/title6.png",
+    				"titles/title7.png", "titles/title9.png",
+    				"titles/title10.png", "titles/title11.png"];
+	
+	function getImageTag() {
+	    var img = '<img src=\"';
+	    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+	    img += imageURLs[randomIndex];
+	    img += '\" alt=\"Some alt text\"/>';
+	    return img;
+	  }
+</script>
+
+
+<html>
+
+	<link rel="stylesheet" href="style.css">	
+	<head>
+		<script src="jquery-3.5.1.js"></script>	
+
+		<script>
+		$(document).ready(function(){
+		  
+		  $("img").fadeToggle(200);
+		  $("html").fadeToggle(500);
+
+			$("#image1").hover(function(){
+				$("#image1").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image1").mouseleave(function(){
+				$("#image1").animate({
+					opacity: '1.0'
+				});
+			});
+
+			$("#image2").hover(function(){
+				$("#image2").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image2").mouseleave(function(){
+				$("#image2").animate({
+					opacity: '1.0'
+				});
+			}); 
+
+			$("#image3").hover(function(){
+				$("#image3").animate({
+					opacity: '0.5'
+				});
+			});
+			$("#image3").mouseleave(function(){
+				$("#image3").animate({
+					opacity: '1.0'
+				});
+			}); 
+	
+		});
+
+		
+		</script>	
+	</head>
+
+	<hr style="opacity: 0.25">
+
+	<body class="main">
+
+		<div class="sidenav">
+		 	<!-- <img id="image1" src="images/crane2.png" + Math.round(Math.random()*3)/> -->
+		 	<script type="text/javascript">
+			  document.write(getImageTag());
+			</script>
+			<br>
+			<a href="index.html">Selected work</a>
+			<a href="prints.html">Prints</a>
+			<a href="contact.html">About</a>
+			
+		</div>
+
+		
+		<br>
+		<p href="text" id="about" style="font-size:25px;"> <i> Coming soon!
+															</i> </p>
+
+		
+
+	</body>
+
+	
+
+</html>
