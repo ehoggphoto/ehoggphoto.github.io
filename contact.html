@@ -38,10 +38,10 @@
     				"titles/title10.png", "titles/title11.png"];
 	
 	function getImageTag() {
-	    var img = '<img src=\"';
+	    var img = '<img href="index.html" src=\"';
 	    var randomIndex = Math.floor(Math.random() * imageURLs.length);
 	    img += imageURLs[randomIndex];
-	    img += '\" alt=\"Some alt text\"/>';
+	    img += '\" alt=\"Some alt text\"/ >';
 	    return img;
 	  }
 </script>
@@ -108,6 +108,7 @@
 			  document.write(getImageTag());
 			</script>
 			<br>
+			<a href="index.html">Home</a>
 			<a href="index.html">Selected work</a>
 			<a href="prints.html">Prints</a>
 			<a href="contact.html">About</a>
@@ -129,15 +130,15 @@
 
 		  <div class="column_info">
 		  	<br>
-		<p href="text" id="about" style="font-size:18px;"> <i> I'm a film photographer based in Manningtree, Essex. 
-															</i> </p>
+			<p href="text" id="about" style="font-size:18px;"> <i> I'm a film photographer based in Manningtree, Essex. I like to experiment with photography, mainly wandering to see what I can find.
+																</i> </p>
 
-		<p href="text" id="about" style="font-size:18px;"> <i> Background: PhD in Robotics and Autonomous Systems, University of Bristol.
-															</i> </p>
+			<p href="text" id="about" style="font-size:18px;"> <i> Background: PhD in Robotics and Autonomous Systems, University of Bristol.
+																</i> </p>
 
-		<br><br>
-		<p href="text" id="about" style="font-size:18px;"> <i> For any interest in fine art prints please contact: elliott.l.hogg@gmail.com
-															</i> </p>
+			<br><br>
+			<p href="text" id="about" style="font-size:18px;"> <i> For any interest in fine art prints please contact: elliott.l.hogg@gmail.com
+																</i> </p>
 
 		  </div>
 		  
